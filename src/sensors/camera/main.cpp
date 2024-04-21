@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/opencv.hpp>
 #include "opencv2/imgproc.hpp"
@@ -9,10 +10,21 @@
 using namespace std;
 using namespace cv;
 
-int main(){
+int cameraIndex = 0;
+
+int main(int argc, char *argv[])
+{
+
+  if(argc > 1){
+    cameraIndex = atoi(argv[1]);
+  }
  
   // Create a VideoCapture object and use camera to capture the video
-  VideoCapture cap(0); 
+  VideoCapture cap(cameraIndex); 
+  cap.set(CAP_PROP_FRAME_WIDTH,1920);
+  cap.set(CAP_PROP_FRAME_HEIGHT,1080); 
+
+  cv::waitKey(1000);
  
   // Check if camera opened successfully
   if(!cap.isOpened()){

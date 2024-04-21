@@ -1,0 +1,33 @@
+- Sensor:
+  type: "Lidar"
+  name: "lidar"
+  port: "/dev/ttyUSB0"
+  baud_rate: 230400
+  mode: "TRIANGLE"
+  connection: "Serial"
+  sample_rate: 4
+  abnormal_count: 4
+  fixed_resolution: true
+  reversion: false
+  clockwise: false
+  auto_reconnect: true
+  single_channel: false
+  intensity: true
+  dtr_ctrl: false 
+  max_angle: 180
+  min_angle: -180
+  max_range: 12
+  min_range: 0.05
+  scan_frequency: 10
+  optval : 8
+  save_data: false
+
+- Sensor:
+  type: "Camera"
+  name: "camera"
+  index: 4
+  frame_width: 640
+  frame_height: 480
+  save_data: false
+  frequency: 10
+
