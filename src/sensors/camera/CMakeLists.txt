@@ -10,7 +10,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Recherche d'OpenCV
 find_package(OpenCV REQUIRED)
 
-find_package(Ceres REQUIRED)
+# find_package(Ceres REQUIRED)
 
 # find_package(yaml-cpp REQUIRED)
 
@@ -43,6 +43,6 @@ add_executable(CameraCalibration
 # Liaison avec la bibliothèque
 target_link_libraries(CameraCalibration
   ${OpenCV_LIBS} 
-  Ceres::ceres
+  # Ceres::ceres
 )
 
