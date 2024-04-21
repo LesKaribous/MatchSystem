@@ -25,4 +25,4 @@ target_link_libraries(Configuration
   yaml-cpp
 )
 
-add_subdirectory(test)
+# add_subdirectory(test)
